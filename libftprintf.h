@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khurtado <khurtado@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 10:41:02 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/14 12:54:08 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/15 11:25:21 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,6 @@
 # include <stdarg.h>
 
 int	ft_printf(char const *str, ...);
+int	ft_print_char(char c);
 
 #endif

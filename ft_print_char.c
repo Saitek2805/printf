@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/14 10:39:51 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/15 12:15:34 by khurtado         ###   ########.fr       */
+/*   Created: 2026/05/15 11:12:22 by khurtado          #+#    #+#             */
+/*   Updated: 2026/05/15 11:25:08 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(char const *str, ...)
+int	ft_print_char(char c)
 {
-	char	*strcpy;
-	int		counter;
-
-	strcpy = malloc (ft_strlen(str));
-	strcpy =(char *) str;
-	counter = -1;
-
-	while (strcpy[++counter] != '\0')
-	{
-		if (strcpy[counter] == '%' && strcpy[counter + 1] == 'c')
-		{
-			ft_print_char(strcpy[counter]);
-			
-		}
-		ft_print_char(strcpy[counter]);
-	}
-	
+	ft_putchar_fd(c , 1);
 	return (0);
 }
