@@ -2,6 +2,6 @@
 
 int main(void)
 {
-	ft_printf("hay un caracter %c en el string");
+	ft_printf("hay un caracter %c en el s%ctring", '@', '@');
 	return (0);
 }

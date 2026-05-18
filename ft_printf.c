@@ -6,30 +6,36 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 10:39:51 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/15 12:15:34 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/18 13:21:46 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+static void ft_handler(va_list arg, char character)
+{
+	if (character == 'c')
+		ft_print_char((char)va_arg(arg, int));
+}
+
 int	ft_printf(char const *str, ...)
 {
-	char	*strcpy;
+	va_list	arg;
 	int		counter;
 
-	strcpy = malloc (ft_strlen(str));
-	strcpy =(char *) str;
+	va_start(arg, str);
 	counter = -1;
-
-	while (strcpy[++counter] != '\0')
+	while (str[++counter])
 	{
-		if (strcpy[counter] == '%' && strcpy[counter + 1] == 'c')
+		if(str[counter] == '%')
 		{
-			ft_print_char(strcpy[counter]);
-			
+			ft_handler(arg, str[counter + 1]);
+			counter += 1;
 		}
-		ft_print_char(strcpy[counter]);
+		else
+			ft_print_char(str[counter]);
 	}
-	
+		
+	va_end(arg);	
 	return (0);
 }
