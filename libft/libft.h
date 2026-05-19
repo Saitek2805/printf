@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: khurtado <khurtado@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/27 12:32:59 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/07 11:43:47 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/19 09:30:55 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

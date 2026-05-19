@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/06 22:37:20 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/19 09:30:53 by khurtado         ###   ########.fr       */
+/*   Created: 2026/05/19 14:50:08 by khurtado          #+#    #+#             */
+/*   Updated: 2026/05/19 15:20:45 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-void	ft_putchar_fd(char c, int fd)
+static int	ft_count_char(int n)
 {
-	write (fd, &c, 1);
+	int		counter;
+	long	nb;
+
+	nb = n;
+	counter = 0;
+	if (nb <= 0)
+		counter++;
+	while (nb != 0)
+	{
+		nb = nb / 10;
+		counter++;
+	}
+	return (counter);
 }
-/*
-int	main(void)
+
+int	ft_print_nbr(int nbr)
 {
-
-	ft_putchar_fd('H', 1);
-	ft_putchar_fd('i', 1);
-	ft_putchar_fd('\n', 1);
-
-	return (0);
-}*/
+	ft_putnbr_fd(nbr, 1);
+	return (ft_count_char(nbr));
+}

@@ -6,7 +6,7 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 11:12:22 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/15 11:25:08 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/19 14:39:48 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_print_char(char c)
 {
-	ft_putchar_fd(c , 1);
-	return (0);
+	return (write (1, &c, 1));
 }
