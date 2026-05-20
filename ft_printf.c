@@ -6,7 +6,7 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 10:39:51 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/20 15:12:55 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/20 16:44:56 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ static int	ft_handler(va_list arg, char character)
 		write(1, "%", 1);
 	if (character == 'u')
 		return (ft_print_unbr(va_arg(arg,unsigned int)));
+	if (character == 'x')
+		return (ft_print_hexl(va_arg(arg,int)) - 1);
+	if (character == 'X')
+		return (ft_print_hexu(va_arg(arg,int)) - 1);
 	return (0);
 }
 

@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 INCLUDES = -I./libft
 
 SRCS = 	ft_printf.c ft_print_char.c ft_print_str.c ft_print_nbr.c \
-		ft_print_unbr.c
+		ft_print_unbr.c ft_print_hexl.c ft_print_hexu.c
 LIBFT = libft/libft.a
 LIBFT_OBJS_DIR = libft_objs
 
