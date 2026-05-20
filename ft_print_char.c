@@ -6,11 +6,11 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 11:12:22 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/19 14:39:48 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/20 10:42:47 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {

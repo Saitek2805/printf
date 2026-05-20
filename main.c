@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int main(void)
@@ -7,7 +7,12 @@ int main(void)
 	//printf("%d",printf("hay un caracter %c en el s%ctring", '@', '@'));
 	//ft_printf("%shay un caracter %c en el s%ctring", "no" , '@', '@');
 	
-	printf("%d",ft_printf("%d %s hay u %s n caracter %c en el s%ctring", 123, "no", "frse2" , '@', '@'));
-	printf("%d",printf("%d %s hay u %s n caracter %c en el s%ctring", 123, "no", "frse2" , '@', '@'));
+	//printf("%d",ft_printf("%d %s hay u %s n caracter %c en el s%ctring", 123, "no", "frse2" , '@', '@'));
+	//printf("%d",printf("%d %s hay u %s n caracter %c en el s%ctring", 123, "no", "frse2" , '@', '@'));
+	//printf("%d",ft_printf("%%"));
+	printf("\n%d\n",ft_printf("unsigned: %u", 1));
+	
+	printf("\n%d\n",printf("unsigned: %u", -1));
+	//printf("%d",printf("%%"));
 	return (0);
 }

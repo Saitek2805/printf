@@ -6,11 +6,11 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 10:39:51 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/19 15:21:43 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/20 15:12:55 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static int	ft_handler(va_list arg, char character)
 {
@@ -18,8 +18,12 @@ static int	ft_handler(va_list arg, char character)
 		ft_print_char(va_arg(arg, int));
 	if (character == 's')
 		return (ft_print_str(va_arg(arg, char *)));
-	if (character == 'd')
-		return (ft_print_nbr(va_arg(arg, int)) - 1);
+	if (character == 'd' || character == 'i')
+		return (ft_print_nbr(va_arg(arg, int)));
+	if (character == '%')
+		write(1, "%", 1);
+	if (character == 'u')
+		return (ft_print_unbr(va_arg(arg,unsigned int)));
 	return (0);
 }
 
@@ -33,6 +37,7 @@ int	ft_printf(char const *str, ...)
 	va_start(arg, str);
 	counter = -1;
 	entries = 0;
+	printed = 0;
 	while (str[++counter])
 	{
 		if (str[counter] == '%')

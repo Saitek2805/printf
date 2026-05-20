@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_nbr.c                                     :+:      :+:    :+:   */
+/*   ft_print_unbr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/19 14:50:08 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/20 10:54:06 by khurtado         ###   ########.fr       */
+/*   Created: 2026/05/20 11:06:38 by khurtado          #+#    #+#             */
+/*   Updated: 2026/05/20 15:14:27 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_count_char(int n)
+static int	ft_count_char(unsigned int n)
 {
 	int		counter;
 	long	nb;
@@ -29,8 +29,19 @@ static int	ft_count_char(int n)
 	return (counter);
 }
 
-int	ft_print_nbr(int nbr)
+int	ft_print_unbr(int nbr)
 {
-	ft_putnbr_fd(nbr, 1);
-	return (ft_count_char(nbr) - 1);
+	unsigned int	nbrcpy;
+	unsigned int	counter;
+
+	nbrcpy = (unsigned) nbr;
+	counter = ft_count_char(nbrcpy) - 1;
+	if (nbrcpy >= 10)
+	{
+		ft_putnbr_fd(nbrcpy / 10, 1);
+		ft_putchar_fd(nbrcpy % 10 + 48, 1);
+	}
+	else
+		ft_putchar_fd(nbrcpy + 48, 1);
+	return (counter);
 }
