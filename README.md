@@ -51,7 +51,7 @@ Se utilizó un **enfoque de análisis secuencial de caracteres** para procesar l
 Para comenzar, clona el repositorio en la carpeta de tu elección:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO> printf
+git clone git@vogsphere.42urduliz.com:vogsphere/intra-uuid-1340624d-1c6d-4e4f-a296-8fd8fd7ddf66-7413675-khurtado printf
 cd printf
 ```
 
