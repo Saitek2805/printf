@@ -6,7 +6,7 @@
 /*   By: khurtado <khurtado@student.42urduliz.com>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 10:41:02 by khurtado          #+#    #+#             */
-/*   Updated: 2026/05/20 16:42:57 by khurtado         ###   ########.fr       */
+/*   Updated: 2026/05/21 10:11:04 by khurtado         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	ft_print_nbr(int nbr);
 int	ft_print_unbr(int nbr);
 int	ft_print_hexl(unsigned int nbr);
 int	ft_print_hexu(unsigned int nbr);
+int	ft_print_ptr(void *ptr);
 
 #endif
